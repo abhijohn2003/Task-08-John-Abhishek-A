@@ -1,0 +1,390 @@
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 9.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| bible              |
+| customers_info     |
+| information_schema |
+| laptop             |
+| librarydb          |
+| mysql              |
+| performance_schema |
+| sunday_class       |
+| xitadel_co         |
+| zion_info          |
++--------------------+
+10 rows in set (0.022 sec)
+
+mysql> USE BIBLE;
+Database changed
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_bible |
++-----------------+
+| new_testament   |
+| old_testament   |
++-----------------+
+2 rows in set (0.035 sec)
+
+mysql> SELECT * FROM NEW_TESTAMENT;
++-------+------------+-----------------+---------+--------+
+| SL_NO | written_by | BOOK_NAME       | CHAPTER | VERSES |
++-------+------------+-----------------+---------+--------+
+|     1 | MATTHEW    | MATTHEW         |      28 |   1071 |
+|     2 | MARK       | MARK            |      16 |    678 |
+|     3 | LUKE       | LUKE            |      24 |   1151 |
+|     4 | JOHN       | JOHN            |      21 |    879 |
+|     5 | LUKE       | ACTS            |      28 |   1007 |
+|     6 | PAUL       | ROMANS          |      16 |    433 |
+|     7 | PAUL       | 1 CORINTHIANS   |      16 |    437 |
+|     8 | PAUL       | 2 CORINTHIANS   |      13 |    257 |
+|     9 | PAUL       | GALATIANS       |       6 |    149 |
+|    10 | PAUL       | EPHESIANS       |       6 |    155 |
+|    11 | PAUL       | PHILIPPIANS     |       4 |    104 |
+|    12 | PAUL       | COLOSSIANS      |       4 |     95 |
+|    13 | PAUL       | 1 THESSALONIANS |       5 |     89 |
+|    14 | PAUL       | 2 THESSALONIANS |       3 |     47 |
+|    15 | PAUL       | 1 TIMOTHY       |       6 |    113 |
+|    16 | PAUL       | 2 TIMOTHY       |       4 |     83 |
+|    17 | PAUL       | TITUS           |       3 |     46 |
+|    18 | PAUL       | PHILEMON        |       1 |     25 |
+|    19 | UNKNOWN    | HEBREWS         |      13 |    303 |
+|    20 | JAMES      | JAMES           |       5 |    108 |
+|    21 | PETER      | 1 PETER         |       5 |    105 |
+|    22 | PETER      | 2 PETER         |       3 |     61 |
+|    23 | JOHN       | 1 JOHN          |       5 |    105 |
+|    24 | JOHN       | 2 JOHN          |       1 |     13 |
+|    25 | JOHN       | 3 JOHN          |       1 |     14 |
+|    26 | JUDE       | JUDE            |       1 |     25 |
+|    27 | JOHN       | REVELATION      |      22 |    404 |
++-------+------------+-----------------+---------+--------+
+27 rows in set (0.013 sec)
+
+mysql> SELECT * FROM OLD_TESTAMENT;
++-------+-----------------+---------+--------+------------+
+| SL_no | BOOK_NAME       | CHAPTER | VERSES | WRITTEN_BY |
++-------+-----------------+---------+--------+------------+
+|     1 | GENESIS         |      50 |   1900 | MOSES      |
+|     2 | EXODUS          |      35 |   1800 | MOSES      |
+|     3 | LEVITICUS       |      40 |   2000 | MOSES      |
+|     4 | NUMBERS         |      36 |   1288 | MOSES      |
+|     5 | DEUTERONOMY     |      34 |    959 | MOSES      |
+|     6 | JOSHUA          |      24 |    658 | JOSHUA     |
+|     7 | JUDGES          |      21 |    618 | SAMUEL     |
+|     8 | RUTH            |       4 |     85 | SAMUEL     |
+|     9 | 1 SAMUEL        |      31 |    810 | SAMUEL     |
+|    10 | 2 SAMUEL        |      24 |    695 | SAMUEL     |
+|    11 | 1 KINGS         |      22 |    816 | JEREMIAH   |
+|    12 | 2 KINGS         |      25 |    719 | JEREMIAH   |
+|    13 | 1 CHRONICLES    |      29 |    942 | EZRA       |
+|    14 | 2 CHRONICLES    |      36 |    822 | EZRA       |
+|    15 | EZRA            |      10 |    280 | EZRA       |
+|    16 | NEHEMIAH        |      13 |    406 | NEHEMIAH   |
+|    17 | ESTHER          |      10 |    167 | MORDECAI   |
+|    18 | JOB             |      42 |   1070 | UNKNOWN    |
+|    19 | PSALMS          |     150 |   2461 | DAVID      |
+|    20 | PROVERBS        |      31 |    915 | SOLOMON    |
+|    21 | ECCLESIASTES    |      12 |    222 | SOLOMON    |
+|    22 | SONG OF SOLOMON |       8 |    117 | SOLOMON    |
+|    23 | ISAIAH          |      66 |   1292 | ISAIAH     |
+|    24 | JEREMIAH        |      52 |   1364 | JEREMIAH   |
+|    25 | LAMENTATIONS    |       5 |    154 | JEREMIAH   |
+|    26 | EZEKIEL         |      48 |   1273 | EZEKIEL    |
+|    27 | DANIEL          |      12 |    357 | DANIEL     |
+|    28 | HOSEA           |      14 |    197 | HOSEA      |
+|    29 | JOEL            |       3 |     73 | JOEL       |
+|    30 | AMOS            |       9 |    146 | AMOS       |
+|    31 | OBADIAH         |       1 |     21 | OBADIAH    |
+|    32 | JONAH           |       4 |     48 | JONAH      |
+|    33 | MICAH           |       7 |    105 | MICAH      |
+|    34 | NAHUM           |       3 |     47 | NAHUM      |
+|    35 | HABAKKUK        |       3 |     56 | HABAKKUK   |
+|    36 | ZEPHANIAH       |       3 |     53 | ZEPHANIAH  |
+|    37 | HAGGAI          |       2 |     38 | HAGGAI     |
+|    38 | ZECHARIAH       |      14 |    211 | ZECHARIAH  |
+|    39 | MALACHI         |       4 |     55 | MALACHI    |
++-------+-----------------+---------+--------+------------+
+39 rows in set (0.011 sec)
+
+mysql> DELIMITER //
+mysql> CREATE PROCEDURE HIGHCHAPTER_BOOK()
+    -> BEGIN
+    -> SELECT BOOK_NAME FROM NEW_TESTAMENT WHERE CHAPTER > 20;
+    -> SELECT BOOK_NAME FROM OLD_TESTAMENT WHERE CHAPTER > 50;
+    -> END /
+    -> END //
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/
+END' at line 5
+mysql> END //
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'END' at line 1
+mysql> DELIMITER //
+mysql> CREATE PROCEDURE HIGHCHAPTER_BOOK()
+    -> BEGIN
+    -> SELECT BOOK_NAME FROM NEW_TESTAMENT WHERE CHAPTER > 20;
+    -> SELECT BOOK_NAME FROM OLD_TESTAMENT WHERE CHAPTER > 50;
+    -> END //
+Query OK, 0 rows affected (0.078 sec)
+
+mysql> DELIMITER ;
+mysql> CALL HIGHCHAPTER_BOOK();
++------------+
+| BOOK_NAME  |
++------------+
+| MATTHEW    |
+| LUKE       |
+| JOHN       |
+| ACTS       |
+| REVELATION |
++------------+
+5 rows in set (0.017 sec)
+
++-----------+
+| BOOK_NAME |
++-----------+
+| PSALMS    |
+| ISAIAH    |
+| JEREMIAH  |
++-----------+
+3 rows in set (0.095 sec)
+
+Query OK, 0 rows affected (0.141 sec)
+
+mysql> DELIMITER ??
+mysql> DELIMITER //
+mysql> CREATE FUNCTION BOOKLENGTH(TITLE VARCHAR(100))
+    -> RETURNS VARCHAR(10)
+    -> DETERMINISTIC
+    -> BEGIN
+    -> IF CHAR_LENGTH(TITLE) > 10 THEN
+    -> RETURN 'YES';
+    -> ELSE
+    -> RETURN 'NO';
+    -> END IF;
+    -> END //
+Query OK, 0 rows affected (0.074 sec)
+
+mysql> DELIMITER ;
+mysql> SELECT BOOK_NAME, BOOKLENGTH(BOOK_NAME) AS LONG_BOOKNAME
+    -> FROM NEW_TETSTAMENT;
+ERROR 1146 (42S02): Table 'bible.new_tetstament' doesn't exist
+mysql> SELECT BOOK_NAME, BOOKLENGTH(BOOK_NAME) AS LONG_BOOKNAME
+    -> FROM NEW_TESTAMENT;
++-----------------+---------------+
+| BOOK_NAME       | LONG_BOOKNAME |
++-----------------+---------------+
+| MATTHEW         | NO            |
+| MARK            | NO            |
+| LUKE            | NO            |
+| JOHN            | NO            |
+| ACTS            | NO            |
+| ROMANS          | NO            |
+| 1 CORINTHIANS   | YES           |
+| 2 CORINTHIANS   | YES           |
+| GALATIANS       | NO            |
+| EPHESIANS       | NO            |
+| PHILIPPIANS     | YES           |
+| COLOSSIANS      | NO            |
+| 1 THESSALONIANS | YES           |
+| 2 THESSALONIANS | YES           |
+| 1 TIMOTHY       | NO            |
+| 2 TIMOTHY       | NO            |
+| TITUS           | NO            |
+| PHILEMON        | NO            |
+| HEBREWS         | NO            |
+| JAMES           | NO            |
+| 1 PETER         | NO            |
+| 2 PETER         | NO            |
+| 1 JOHN          | NO            |
+| 2 JOHN          | NO            |
+| 3 JOHN          | NO            |
+| JUDE            | NO            |
+| REVELATION      | NO            |
++-----------------+---------------+
+27 rows in set (0.027 sec)
+
+mysql> SELECT BOOK_NAME, BOOKLENGTH(BOOK_NAME) AS LONG_BOOKNAME
+    -> FROM OLD_TESTAMENT;
++-----------------+---------------+
+| BOOK_NAME       | LONG_BOOKNAME |
++-----------------+---------------+
+| GENESIS         | NO            |
+| EXODUS          | NO            |
+| LEVITICUS       | NO            |
+| NUMBERS         | NO            |
+| DEUTERONOMY     | YES           |
+| JOSHUA          | NO            |
+| JUDGES          | NO            |
+| RUTH            | NO            |
+| 1 SAMUEL        | NO            |
+| 2 SAMUEL        | NO            |
+| 1 KINGS         | NO            |
+| 2 KINGS         | NO            |
+| 1 CHRONICLES    | YES           |
+| 2 CHRONICLES    | YES           |
+| EZRA            | NO            |
+| NEHEMIAH        | NO            |
+| ESTHER          | NO            |
+| JOB             | NO            |
+| PSALMS          | NO            |
+| PROVERBS        | NO            |
+| ECCLESIASTES    | YES           |
+| SONG OF SOLOMON | YES           |
+| ISAIAH          | NO            |
+| JEREMIAH        | NO            |
+| LAMENTATIONS    | YES           |
+| EZEKIEL         | NO            |
+| DANIEL          | NO            |
+| HOSEA           | NO            |
+| JOEL            | NO            |
+| AMOS            | NO            |
+| OBADIAH         | NO            |
+| JONAH           | NO            |
+| MICAH           | NO            |
+| NAHUM           | NO            |
+| HABAKKUK        | NO            |
+| ZEPHANIAH       | NO            |
+| HAGGAI          | NO            |
+| ZECHARIAH       | NO            |
+| MALACHI         | NO            |
++-----------------+---------------+
+39 rows in set (0.015 sec)
+
+mysql> DELIMITER //
+mysql>
+mysql> CREATE PROCEDURE ShowBooksByType(IN book_type VARCHAR(10))
+    -> BEGIN
+    ->     IF book_type = 'old' THEN
+    ->         SELECT BOOK_NAME, CHAPTER FROM OLD_TESTAMENT;
+    ->     ELSEIF book_type = 'new' THEN
+    ->         SELECT BOOK_NAME, CHAPTER FROM NEW_TESTAMENT;
+    ->     ELSE
+    ->         SELECT 'Invalid input. Use "old" or "new".' AS Message;
+    ->     END IF;
+    -> END //
+Query OK, 0 rows affected (0.053 sec)
+
+mysql>
+mysql> DELIMITER ;
+mysql> CALL ShowBooksByType('old');
++-----------------+---------+
+| BOOK_NAME       | CHAPTER |
++-----------------+---------+
+| GENESIS         |      50 |
+| EXODUS          |      35 |
+| LEVITICUS       |      40 |
+| NUMBERS         |      36 |
+| DEUTERONOMY     |      34 |
+| JOSHUA          |      24 |
+| JUDGES          |      21 |
+| RUTH            |       4 |
+| 1 SAMUEL        |      31 |
+| 2 SAMUEL        |      24 |
+| 1 KINGS         |      22 |
+| 2 KINGS         |      25 |
+| 1 CHRONICLES    |      29 |
+| 2 CHRONICLES    |      36 |
+| EZRA            |      10 |
+| NEHEMIAH        |      13 |
+| ESTHER          |      10 |
+| JOB             |      42 |
+| PSALMS          |     150 |
+| PROVERBS        |      31 |
+| ECCLESIASTES    |      12 |
+| SONG OF SOLOMON |       8 |
+| ISAIAH          |      66 |
+| JEREMIAH        |      52 |
+| LAMENTATIONS    |       5 |
+| EZEKIEL         |      48 |
+| DANIEL          |      12 |
+| HOSEA           |      14 |
+| JOEL            |       3 |
+| AMOS            |       9 |
+| OBADIAH         |       1 |
+| JONAH           |       4 |
+| MICAH           |       7 |
+| NAHUM           |       3 |
+| HABAKKUK        |       3 |
+| ZEPHANIAH       |       3 |
+| HAGGAI          |       2 |
+| ZECHARIAH       |      14 |
+| MALACHI         |       4 |
++-----------------+---------+
+39 rows in set (0.018 sec)
+
+Query OK, 0 rows affected (0.927 sec)
+
+mysql> CALL ShowBooksByType('new');
++-----------------+---------+
+| BOOK_NAME       | CHAPTER |
++-----------------+---------+
+| MATTHEW         |      28 |
+| MARK            |      16 |
+| LUKE            |      24 |
+| JOHN            |      21 |
+| ACTS            |      28 |
+| ROMANS          |      16 |
+| 1 CORINTHIANS   |      16 |
+| 2 CORINTHIANS   |      13 |
+| GALATIANS       |       6 |
+| EPHESIANS       |       6 |
+| PHILIPPIANS     |       4 |
+| COLOSSIANS      |       4 |
+| 1 THESSALONIANS |       5 |
+| 2 THESSALONIANS |       3 |
+| 1 TIMOTHY       |       6 |
+| 2 TIMOTHY       |       4 |
+| TITUS           |       3 |
+| PHILEMON        |       1 |
+| HEBREWS         |      13 |
+| JAMES           |       5 |
+| 1 PETER         |       5 |
+| 2 PETER         |       3 |
+| 1 JOHN          |       5 |
+| 2 JOHN          |       1 |
+| 3 JOHN          |       1 |
+| JUDE            |       1 |
+| REVELATION      |      22 |
++-----------------+---------+
+27 rows in set (0.007 sec)
+
+Query OK, 0 rows affected (0.608 sec)
+
+mysql> CALL ShowBooksByType('gospel'); -- Will return invalid input message
++------------------------------------+
+| Message                            |
++------------------------------------+
+| Invalid input. Use "old" or "new". |
++------------------------------------+
+1 row in set (0.007 sec)
+
+Query OK, 0 rows affected (0.031 sec)
+
+mysql> DELIMITER //
+mysql>
+mysql> CREATE FUNCTION BookLength(chap INT)
+    -> RETURNS VARCHAR(20)
+    -> DETERMINISTIC
+    -> BEGIN
+    ->     IF chap > 20 THEN
+    ->         RETURN 'Long Book';
+    ->     ELSE
+    ->         RETURN 'Short Book';
+    ->     END IF;
+    -> END //
+ERROR 1304 (42000): FUNCTION BookLength already exists
+mysql>
+mysql> DELIMITER ;
+mysql>

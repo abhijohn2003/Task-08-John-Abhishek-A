@@ -1,0 +1,50 @@
+1. Difference Between Procedure and Function
+  = Procedure :
+* cannot be used in select.
+* to perform a task
+    Function :
+* can be used in select/where.
+* to compute and return value.
+
+2. What is IN/OUT Parameter?
+   = IN: Passes a value into the procedure
+     OUT: Returns a value out of the procedure.
+     INOUT: Passes a value in, and also returns a modified value out.
+
+3. Can Functions Return Tables?
+   = No, MySQL functions cannot return tables.
+
+4. What is RETURN Used For?
+   = Used in a function to return a value back to the caller.
+
+5. How to Call Stored Procedures?
+   = CALL procedure_name(parameters);
+
+6. What is the Benefit of Stored Routines (Procedures/Functions)?
+   = Reusability
+     Modular Code
+
+7. Can Procedures Have Loops?
+   = Yes! MySQL procedures support loops.
+
+8. Difference Between Scalar and Table-Valued Functions
+   = Scalar :
+* Returns a single value.
+     Table-values :
+*  Not supported in MySQL.
+
+9. What is a Trigger?
+   = A trigger is a special procedure that automatically runs in response to certain events     on a table:
+    INSERT, UPDATE, DELETE
+
+10.How to Debug Stored Procedures?
+  = Debugging in MySQL is manual (no built-in debugger), but you can:
+
+* Use SELECT statements to print values step-by-step
+
+* Use MySQL Workbench debugger (in GUI)
+
+* Check the error messages carefully
+
+* Log info into a debug table
+
